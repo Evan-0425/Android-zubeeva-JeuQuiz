@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    tools:context=".Jeux">
+
+    <TextView
+        android:id="@+id/TFplayer1"
+        android:layout_width="@dimen/TextFieldPlayerL"
+        android:layout_height="@dimen/TextFieldPlayerH"
+        android:text="@string/Player1"
+        android:gravity="center"
+        android:textSize="@dimen/NomJoueurTextSize"
+        android:rotation="@dimen/rotation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TFplayer2"
+        android:layout_width="@dimen/TextFieldPlayerL"
+        android:layout_height="@dimen/TextFieldPlayerH"
+        android:layout_marginTop="30dp"
+        android:text="@string/Player2"
+        android:textSize="@dimen/NomJoueurTextSize"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </TextView>
+
+
+
+    <TextView
+        android:id="@+id/GoPlayer1"
+        android:layout_width="@dimen/TextFieldQuestPlayerL"
+        android:layout_height="@dimen/TextFieldQuestPlayerH"
+        android:text="@string/Go"
+        android:textSize="@dimen/QuestionTextSize"
+        android:gravity="center"
+        android:rotation="@dimen/rotation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BoutonPlayer1">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/GoPlayer2"
+        android:layout_width="@dimen/TextFieldQuestPlayerL"
+        android:layout_height="@dimen/TextFieldQuestPlayerH"
+        android:text="@string/Go"
+        android:textSize="@dimen/QuestionTextSize"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/BoutonPlayer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </TextView>
+
+
+
+
+    <TextView
+        android:id="@+id/ScorePlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="@dimen/ScoreTextSize"
+        android:layout_marginStart="@dimen/ScoreMargin"
+        android:rotation="@dimen/rotation"
+        app:layout_constraintBottom_toTopOf="@+id/BoutonPlayer2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GoPlayer1">
+    </TextView>
+
+    <TextView
+        android:id="@+id/ScorePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ScoreMargin"
+        android:text="0"
+        android:textSize="@dimen/ScoreTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/BoutonPlayer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GoPlayer1" />
+
+    <Button
+        android:id="@+id/BoutonPlayer1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/BoutonReponseHauteur"
+        android:layout_marginLeft="@dimen/ButtonMarginLR"
+        android:layout_marginTop="@dimen/ButtonMarginTB"
+        android:layout_marginRight="@dimen/ButtonMarginLR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/BoutonPlayer2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/BoutonReponseHauteur"
+        android:layout_marginLeft="@dimen/ButtonMarginLR"
+        android:layout_marginRight="@dimen/ButtonMarginLR"
+        android:layout_marginBottom="@dimen/ButtonMarginTB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/BoutonRejouer"
+        android:layout_width="@dimen/BoutonRejouerMenuLargeur"
+        android:layout_height="@dimen/BoutonRejMenuHauteur"
+        android:layout_marginEnd="@dimen/BoutonRejouerMenuMargin"
+        android:text="@string/Rejouer"
+        app:layout_constraintBottom_toBottomOf="@+id/GoPlayer2"
+        app:layout_constraintEnd_toEndOf="@+id/ScorePlayer2"
+        app:layout_constraintStart_toStartOf="@+id/ScorePlayer1"
+        app:layout_constraintTop_toTopOf="@+id/GoPlayer1"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+    <Button
+        android:id="@+id/BoutonMenu"
+        android:layout_width="@dimen/BoutonRejouerMenuLargeur"
+        android:layout_height="@dimen/BoutonRejMenuHauteur"
+        android:layout_marginStart="@dimen/BoutonRejouerMenuMargin"
+        android:text="@string/Menu"
+        app:layout_constraintBottom_toBottomOf="@+id/GoPlayer2"
+        app:layout_constraintEnd_toEndOf="@+id/ScorePlayer2"
+        app:layout_constraintStart_toStartOf="@+id/ScorePlayer1"
+        app:layout_constraintTop_toTopOf="@+id/GoPlayer1"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

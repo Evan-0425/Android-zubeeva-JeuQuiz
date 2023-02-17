@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="TextFieldPlayerL">400dp</dimen>
+    <dimen name="TextFieldPlayerH">50dp</dimen>
+    <dimen name="ButtonMarginLR">45dp</dimen>
+    <dimen name="ButtonMarginTB">45dp</dimen>
+    <dimen name="TextFieldQuestPlayerL">850dp</dimen>
+    <dimen name="TextFieldQuestPlayerH">50dp</dimen>
+    <dimen name="NomJoueurTextSize">25sp</dimen>
+    <dimen name="rotation">180</dimen>
+    <dimen name="QuestionTextSize">20sp</dimen>
+    <dimen name="ScoreTextSize">100sp</dimen>
+    <dimen name="ScoreMargin">20dp</dimen>
+    <dimen name="BoutonReponseHauteur">48dp</dimen>
+
+</resources>
