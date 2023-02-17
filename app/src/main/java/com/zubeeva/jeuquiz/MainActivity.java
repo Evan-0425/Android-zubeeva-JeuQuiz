@@ -1,8 +1,10 @@
 package com.zubeeva.jeuquiz;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -51,6 +53,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_paramètre:
                 return true;
             case R.id.menu_about:
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+                builder1.setMessage("Créateurs : Evan Zuber \nDate : 17.02.2023 \nVersion : 1.0");
+                builder1.setCancelable(true);
+
+                builder1.setPositiveButton(
+                        "Oui",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+
+                AlertDialog alert11 = builder1.create();
+                alert11.show();
                 return true;
             case R.id.menu_effacer:
                 Player1.setText("");

@@ -116,6 +116,13 @@ public class Jeux extends AppCompatActivity {
                 startCountDownTimer();
             }
         });
+        ButtonMenu.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent Activity_menu = new Intent(Jeux.this, MainActivity.class);
+                startActivity(Activity_menu);
+            }
+        });
     }
 
     public void startQuestionIterative(){
@@ -130,7 +137,7 @@ public class Jeux extends AppCompatActivity {
                 //incrémente l'index pour ensuite sortir une question
                 qManager.indexIncremente();
                 Question question = qManager.getQuestion();
-                if(qManager.getQuestionListe().size() == qManager.getIndex()){
+                if(qManager.getQuestionListe().size() -1 == qManager.getIndex()){
                     //arrete la boucle et rend invisible les choses qui faut
                     handler.removeCallbacks(this);
                     SetVisibleInvisible();
